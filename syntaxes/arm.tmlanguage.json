@@ -1,5 +1,5 @@
 {
-	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
   "scopeName": "source.arm",
   "name": "ARM",
   "fileTypes": [
@@ -48,7 +48,7 @@
       }
     },
     {
-      "match": "\\b(?i)v?(?:ldr|str)(?:d(\\w{2})?|(?:(?:s?b|s?h)(\\w{2})?|(\\w{2})(?:s?b|s?h)?))(?-i)\\b",
+      "match": "\\b(?i)v?(?:ldr|str)(?:d(\\w{2})?|(?:(?:s?b|s?h|s?bne)(\\w{2})?|(\\w{2})(?:s?b|s?h|s?bne)?))(?-i)\\b",
       "name": "support.function.mnemonic.memory.arm",
       "captures": {
         "1": {
@@ -120,7 +120,7 @@
       }
     },
     {
-      "match": "\\b(?i)(def(b|w|s)|equ|align\\s.+\\.s)(?-i)\\b",
+      "match": "\\b(?i)(def(b|w|s)|equ|bne|align\\s.+\\.s)(?-i)\\b",
       "name": "keyword.control.define.arm"
     },
     {
